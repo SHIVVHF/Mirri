@@ -394,7 +394,7 @@ class TgUploader:
                 if self.__is_cancelled:
                     return
                 buttons = await self.__buttons(self.__up_path, is_video)
-                nrml_media = await self.__client.send_document(self.name,chat_id=self.__sent_msg.chat.id,
+                nrml_media = await self.__client.send_document(file=self.name,chat_id=self.__sent_msg.chat.id,
                                                                        reply_to_message_id=self.__sent_msg.id,
                                                                        document=self.__up_path,
                                                                        thumb=thumb,
@@ -438,7 +438,7 @@ class TgUploader:
                 if self.__is_cancelled:
                     return
                 buttons = await self.__buttons(self.__up_path, is_video)
-                nrml_media = await self.__client.send_video(chat_id=self.__sent_msg.chat.id,
+                nrml_media = await self.__client.send_video(file=self.name,chat_id=self.__sent_msg.chat.id,
                                                                     reply_to_message_id=self.__sent_msg.id,
                                                                     video=self.__up_path,
                                                                     caption=cap_mono,
@@ -463,7 +463,7 @@ class TgUploader:
                 duration, artist, title = await get_media_info(self.__up_path)
                 if self.__is_cancelled:
                     return
-                self.__sent_msg = await self.__client.send_audio(chat_id=self.__sent_msg.chat.id,
+                self.__sent_msg = await self.__client.send_audio(file=self.name,chat_id=self.__sent_msg.chat.id,
                                                                     reply_to_message_id=self.__sent_msg.id,
                                                                     audio=self.__up_path,
                                                                     caption=cap_mono,
