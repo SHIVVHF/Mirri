@@ -394,7 +394,7 @@ class TgUploader:
                 if self.__is_cancelled:
                     return
                 buttons = await self.__buttons(self.__up_path, is_video)
-                nrml_media = await self.__client.send_document(filename=self.name,,chat_id=self.__sent_msg.chat.id,
+                nrml_media = await self.__client.send_document(chat_id=self.__sent_msg.chat.id,
                                                                        reply_to_message_id=self.__sent_msg.id,
                                                                        document=self.__up_path,
                                                                        thumb=thumb,
@@ -438,7 +438,7 @@ class TgUploader:
                 if self.__is_cancelled:
                     return
                 buttons = await self.__buttons(self.__up_path, is_video)
-                nrml_media = await self.__client.send_video(title=file_name,chat_id=self.__sent_msg.chat.id,
+                nrml_media = await self.__client.send_video(chat_id=self.__sent_msg.chat.id,
                                                                     reply_to_message_id=self.__sent_msg.id,
                                                                     video=self.__up_path,
                                                                     caption=cap_mono,
