@@ -121,7 +121,7 @@ class WZMLStyle:
     
     # async def __msg_to_reply(self): ---> pyrogramEngine.py
     L_PM_START =            "🏁 <b><u>Leech Started</u> :</b>\n\n<b>💡 Source :</b> <a href='{msg_link}'>Click Here</a>"
-    L_LOG_START =           "➲ <b><u>🔐File :</u></b>\n┃ <b>Source :</b> <a href='{msg_link}'>Click Here</a>"
+    L_LOG_START =           "➲ <b><u>🔐File :</u></b>\n┃ <b>Source :</b> <a href='https://t.me/Gpscincludeclass3'>Click Here</a>"
 
     # async def onUploadComplete(): ---> tasks_listener.py
     NAME =                  '┏<b>📚 Files: <b>{Name}</b>\n┃\n'
